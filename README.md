@@ -25,6 +25,19 @@ To get install on your machine follow these steps:
     ```
 1. Enter into the cloned project using command `` cd moringa-prep-ip-02-day-of-birth-calculator``
 
+## Known bugs
+
+There are no kown bugs. Please contact me below if you find any.
+
+## CONTACT AND SUPPORT
+In case of bugs, collaboration or support, please contact me through email: *jofonowino@gmail.com*
+
+### Licence
+
+This work is protected under MIT LICENCE.
+
+>>COPYRIGHT &copy; PHILIP OWINO 2021
+
 
 
 
