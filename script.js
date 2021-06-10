@@ -1,11 +1,18 @@
+// HTML input and output elements
 var year = document.getElementById('year').value;
 var month = document.getElementById('month').value;
-var day = document.getElementById('month').value;
+var date = document.getElementById('date').value;
 var gender  = document.getElementById('gender').value;
-var date = 50;
+
+//Data available for our app
+var months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+
+var akanMales = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+
+var akanFemales = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 // Function to validate date and year
-function validateInput(dateInput,yearInput) {
+function validateInput(dat) {
     var date = parseInt(dateInput);
     var year = parseInt(yearInput);
     // Check if year is four digits
@@ -34,6 +41,9 @@ function calculateDay(date,month,year) {
 
     
     var day = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
+
 }
 
-validateInput(3,"1234");
+let mont = 'january';
+
+console.log(months.indexOf(mont));
