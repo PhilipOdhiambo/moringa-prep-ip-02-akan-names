@@ -5,28 +5,27 @@ var date = document.getElementById('date').value;
 var gender  = document.getElementById('gender').value;
 
 //Data available for our app
-var months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+var weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 var akanMales = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 var akanFemales = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 // Function to validate date and year
-function validateInput(dat) {
-    var date = parseInt(dateInput);
-    var year = parseInt(yearInput);
-    // Check if year is four digits
-    if (yearInput.length !== 4 || isNaN(year)) {
+function validateInput(year, month, date) {
+    if (year.length !== 4 || isNaN(parseInt(year))) {
         console.log("invalid Year");
-    } else if (date < 1 || date > 31) {
-        console.log("invalid date")
+    } else if (parseInt(month) < 1 || parseInt(month) > 12) {
+      console.log("invalid month");
+    } else if (parseInt(date) < 1 || parseInt(date) > 31) {
+      console.log("invalid date");
     } else {
-        calculateDay(date, month, year)
+        return calculateDay(year, month, date);
     }
 }
 
 // Function to caluculate Day
-function calculateDay(date,month,year) {
+function calculateDay(year,month,date) {
   /* 
     Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7;
     where;
@@ -38,12 +37,13 @@ function calculateDay(date,month,year) {
  */ 
     var cc = parseInt(year.substr(0,2));
     var yy = parseInt(year.substr(2));
+    var mm = parseInt(month);
+    var dd = parseInt(date)
 
     
-    var day = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
+    var d = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7;
+
+    return d;
 
 }
 
-let mont = 'january';
-
-console.log(months.indexOf(mont));
