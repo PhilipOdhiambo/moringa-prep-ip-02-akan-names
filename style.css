@@ -1,0 +1,13 @@
+.form-control {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+.output .form-control {
+    display: block;
+}
+
+.btn-primary {
+    background-color: rgb(43, 43, 11);
+}
