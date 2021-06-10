@@ -39,11 +39,30 @@ function calculateDay(year,month,date) {
     var yy = parseInt(year.substr(2));
     var mm = parseInt(month);
     var dd = parseInt(date)
-
     
     var d = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7;
 
-    return d;
+    // This method returns a float that should be converted to integer by dropping the decimal part
+    var dayIndex = parseInt(d);
 
+    // Since the days of the week is an array which is zero-based, subract 1
+    dayIndex -= 1;
+
+    return dayIndex;
 }
+
+
+// Function to return Akan name
+function akanName(gender, indexOfDay) {
+    var sex = gender.toLocaleLowerCase();
+    if (sex === "male") {
+        return akanMales[indexOfDay];
+    } else if (sex === "female") {
+        return akanFemales[indexOfDay];
+    } else {
+        return "";
+    }
+}
+
+console.log(akanName('male',0))
 
