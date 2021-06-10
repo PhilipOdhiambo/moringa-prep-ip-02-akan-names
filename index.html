@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>True Birth Day</title>
   </head>
-  <body style="background-color: #4356ada1">
+  <body>
       <!-- Header -->
     <header class="container-fluid">
         <div class="row">
@@ -29,36 +29,44 @@
 
     <!--  Main section-->
 
-    <main class="container" style="height: 90vh;">
+    <main class="container">
         <div class="row intro">
             <p>What Day is it? [ <span>Monday, Tuesday, Wednesday, Thursday, Friday .....</span>]</p>
         </div>
         <div class="row title">
             <h1 class="text-center">True Birth Day App</h1>
         </div>
-        <div class="row bg-danger">
-            <div class="col-md-6">
-                <form class="mt-3" action="">
+        <div class="row">
+            <div class="col-md-5 input">
+                <form class="mt-3 bg-info pt-2" action="">
 
                     <div class="form-group">
-                        <label class="control-label me-2" for="year">Year:</label>
+                        <label class="control-label" for="year">Year:</label>
                         <input class="form-control" type="text" name="" id="year">
                     </div>
                     <div class="form-group">
-                        <label class="control-label me-2" for="month">Month:</label>
+                        <label class="control-label" for="month">Month:</label>
                         <input class="form-control" type="text" name="" id="month">
                     </div>
                     <div class="form-group">
-                        <label class="control-label me-2" for="day">Day:</label>
+                        <label class="control-label" for="day">Day:</label>
                         <input class="form-control" type="text" name="" id="day">
                     </div>
+                    <div class="form-group">
+                        <label class="control-label" for="gender">Gender:</label>
+                        <select class="form-select" name="" id="gender">
+                            <option value="select">--select--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                </div>
 
                     <!-- Form submit -->
-                    <button class="btn btn-primary form-control">Enter</button>
+                    <button class="btn btn-primary form-control" >Submit To Know &ThickSpace; &RightArrow;</button>
 
                 </form>
             </div>
-            <div class="col-6 output" style="background-color: #4356;height: 200px;">
+            <div class="col-7 output">
                 <div class="form-group">
                     <label class="control-label" for="birth-date">Your Birth Date:</label>
                     <input class="form-control" type="text" name="" id="birth-date">

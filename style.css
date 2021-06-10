@@ -1,13 +1,42 @@
-.form-control {
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #6474b8;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.input label {
+    width: 100px;
+    text-align: right;
+    margin-left: 1.5rem;
+}
+
+.form-control,
+.form-select {
     display: inline-block;
     width: 50%;
     margin-bottom: 5px;
+}
+
+.output {
+    margin-top: 100px;
+    padding-left: 200px;
 }
 
 .output .form-control {
     display: block;
 }
 
+
+
 .btn-primary {
     background-color: rgb(43, 43, 11);
+    float: right;
+    margin-top: 1rem;
 }
