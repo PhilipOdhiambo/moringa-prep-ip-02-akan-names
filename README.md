@@ -1,5 +1,5 @@
-# DAY OF BIRTH CALCULATOR
-#### Calculates date of birth given the date
+# AKAN NAMES (DAY OF BIRTH CALCULATOR)
+#### Calculates day of the week one was born
 
 ### Author
 #### Philip Odhiambo
