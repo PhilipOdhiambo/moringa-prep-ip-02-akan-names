@@ -14,7 +14,7 @@ This app takes in your date of birth, and gender, and returns to the screen the 
 - CSS
 
 ### HOW TO INSTALL
-Click [THIS LINK](https://philipodhiambo.github.io/moringa-prep-ip-02-akan-names/) to check out the app.
+Click [THIS LINK](https://philipodhiambo.github.io/moringa-prep-ip-02-akan-names/cccccccccccccccccccccccccccccccccccccccccccccccccccccccc) to check out the app.
 
 To get install on your machine follow these steps:
 1. Navigate to the directory you want to install the project
