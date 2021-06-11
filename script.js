@@ -1,36 +1,38 @@
 // HTML input elements
-var year = document.getElementById('year').value;
-var month = document.getElementById('month').value;
-var date = document.getElementById('date').value;
-var gender  = document.getElementById('gender').value;
+var year = document.getElementById('year');
+var month = document.getElementById('month');
+var date = document.getElementById('date');
+var gender  = document.getElementById('gender');
 
 // HTML output elements
 var birthDay = document.getElementById('birth-day');
 var akanName = document.getElementById('akan-name');
 
 //Data available for our app
-var weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 var akanMales = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 var akanFemales = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 // Function to validate date and year
-function validateInput(year, month, date) {
+function validInput(year, month, date) {
     if (year.length !== 4 || isNaN(parseInt(year))) {
-        console.log("invalid Year");
+        alert("invalid Year");
+        return false
     } else if (parseInt(month) < 1 || parseInt(month) > 12) {
       console.log("invalid month");
     } else if (parseInt(date) < 1 || parseInt(date) > 31) {
-      console.log("invalid date");
+      alert("invalid date");
+      return false
     } else {
-        return calculateDay(year, month, date);
+        return true
     }
 }
 
 
-// Function to caluculate Day
-function calculateDay(year,month,date) {
+
+function calculateDayIndex(year,month,date) {
   /* 
     Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7;
     where;
@@ -48,10 +50,7 @@ function calculateDay(year,month,date) {
     var d = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7;
 
     // This method returns a float that should be converted to integer by dropping the decimal part
-    var dayIndex = parseInt(d);
-
-    // Since the days of the week is an array which is zero-based, subract 1
-    dayIndex -= 1;
+    var dayIndex = parseInt(d);    
 
     return dayIndex;
 }
@@ -60,17 +59,34 @@ function calculateDay(year,month,date) {
 
 // Function to return Akan name
 function returnAkanName(gender, indexOfDay) {
-    var sex = gender.toLocaleLowerCase();
+    var sex = gender.toLowerCase();
     if (sex === "male") {
         return akanMales[indexOfDay];
     } else if (sex === "female") {
         return akanFemales[indexOfDay];
     } else {
-        return "";
+        return "No Gender Provided";
     }
 }
 
+// submit
+function submit() {
+    validateInput(year,month,date);
+    let dayIndex = calculateDayIndex(year,month,date);
+}
 
 // Event handler
+document.getElementById('submit').addEventListener('click',() =>{
+    let yea = year.value
+    let mont = month.value
+    let dat = date.value
+    let gende = gender.value
+   if(validInput(yea,mont,dat)) {
+       let dayIndex = calculateDayIndex(yea,mont,dat)
+       birthDay.value = weekDays[dayIndex]
+       akanName.value = returnAkanName(gende, dayIndex);
+   }    
+
+})
 
 
