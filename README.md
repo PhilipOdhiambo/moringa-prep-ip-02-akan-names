@@ -21,7 +21,7 @@ To get install on your machine follow these steps:
 1. On the command promp or termina run the commad
 
     ```
-    git clone https://philipodhiambo.github.com/moringa-prep-ip-02-day-of-birth-calculator.git
+    git clone https://philipodhiambo.github.com/moringa-prep-ip-02-akan-names.git
     ```
 1. Enter into the cloned project using command `` cd moringa-prep-ip-02-day-of-birth-calculator``
 
