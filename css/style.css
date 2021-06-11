@@ -4,21 +4,45 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #6474b8;
+    background-color: #9fa8ce;
+}
+
+h1,h2 {
+    color: rgb(129, 19, 129);
+}
+
+p {
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.678);
+    letter-spacing: .1rem;
+
+}
+
+em {
+    text-decoration: underline;
 }
 
 header {
-    color: white;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1.5rem;
     margin-bottom: 2rem;
+}
+
+header p {
+    color: white;
+}
+
+header span {
+    font-weight: 500;
+
 }
 
 
 main {
     flex-grow: 1;
 }
+
 
 .input label {
     width: 100px;

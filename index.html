@@ -17,7 +17,7 @@
   <body>
       <!-- Header -->
     <header class="container-fluid bg-dark">
-         <p>You can know your <strong>Birth Day</strong> from your <strong>birthday</strong> </p>
+         <p>What Day was it? [ <span>Monday, Tuesday, Wednesday, Thursday, Friday .....</span>]</p>
 
          <a class="btn btn-success" href="https://philipodhiambo.github.io/moringa-prep-ip-01-portfolio/">Visit My Portfolio</a>
     </header>
@@ -25,15 +25,15 @@
     <!--  Main section-->
 
     <main class="container">
-        <div class="row intro">
-            <p>What Day is it? [ <span>Monday, Tuesday, Wednesday, Thursday, Friday .....</span>]</p>
-        </div>
-        <div class="row title">
-            <h1 class="text-center">True Birth Day App</h1>
-        </div>
+        <h1 class="text-center">True Birth Day App</h1>
+        <h2>Introduction</h2>
+        <p>Enter birthday to know what <em>day of the week</em> it was. </p>
+
+        <p><strong>BONUS:</strong> Select gender to see an Akan (Ghanian) name based on that day.</p>
+        
         <div class="row">
             <div class="col-md-5 input">
-                <form class="mt-3 bg-info pt-2" action="">
+                <form class="mt-3 pt-2" action="">
 
                     <div class="form-group">
                         <label class="control-label" for="year">Year:</label>
@@ -55,13 +55,13 @@
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
-                </div>
+                    </div>
 
                     <!-- Form submit -->
-                    
+                    <button type="button" class="btn btn-primary form-control" id="submit" >Submit To Know &ThickSpace; &RightArrow;</button>                    
 
                 </form>
-                <button class="btn btn-primary form-control" id="submit" >Submit To Know &ThickSpace; &RightArrow;</button>
+                
             </div>
             <div class="col-7 output">
                 <div class="form-group">
