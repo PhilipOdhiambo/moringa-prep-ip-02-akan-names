@@ -18,7 +18,7 @@ Click [THIS LINK](https://philipodhiambo.github.io/moringa-prep-ip-02-akan-names
 
 To get install on your machine follow these steps:
 1. Navigate to the directory you want to install the project
-1. On the command promp or termina run the commad
+1. On the command prompt or terminal run the commad
 
     ```
     git clone https://philipodhiambo.github.com/moringa-prep-ip-02-akan-names.git
